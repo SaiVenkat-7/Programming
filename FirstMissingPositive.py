@@ -34,3 +34,32 @@ class Solution(object):
                 return i+1
             f = new_p[i]
         return f+1
+    
+"""
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        
+        N = len(nums) 
+        for i in range(N):
+            if nums[i] <= 0 or nums[i] > N:
+                nums[i] = N + 1
+        
+        
+      
+        for i in range(N):
+            v = abs(nums[i]) 
+            print(v)
+            if v-1 < N and nums[v-1] > 0:
+                nums[v-1] = -nums[v - 1]
+        
+        # After the transformations, any positive number in array indicates a missing number in range 1 to N
+        # Take the first found positive value, if any
+        # Time: O(N)
+        for i in range(N):
+            print(nums[i])
+            if nums[i] > 0:
+                return i+1
+
+      
+        return N+1
+"""
